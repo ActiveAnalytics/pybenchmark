@@ -3,6 +3,32 @@ pybenchmark
 
 Scripts that carry out benchmarking in Python similar to the microbenchmarks package in R
 
+# Description
+
+The `bench` function is the workhorse function for benchmarking the details are given below
+
+```
+bench(sExpr, neval=100, units = "ms", ndigits = 5)
+```
+
+sExpr: This is a string expression
+units: These are units, defaults to "ms" milliseconds, but "us": (microseconds),
+        "ns": nanoseconds, "s": time in seconds, "raw": raw time in seconds are available
+ndigits: These are number of decimal places
+
+```
+benchmark(*args, **kwargs)
+```
+*args: are comma separated string arguments to be evaluated in the benchmark
+**kwargs: are named arguments passed to the `bench` function
+
+```
+lbenchmark(lExpr, **kwargs)
+```
+lExpr: This is a list of expressions
+**kwargs: are names arguments that are passed to the `bench` function
+
+
 # Usage Examples
 
 ## Loaded libraries:
