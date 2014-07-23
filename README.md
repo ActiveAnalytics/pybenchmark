@@ -14,7 +14,7 @@ bench(sExpr, neval=100, units = "ms", ndigits = 5)
 `sExpr`: This is a string expression
 `units`: These are units, defaults to `"ms"`: milliseconds, but `"us"`: microseconds,
         `"ns"`: nanoseconds, `"s"`: time in seconds, `"raw"`: raw time in seconds are available
-`ndigits`: These are number of decimal places
+`ndigits`: the are number of decimal places.
 
 ```
 benchmark(*args, **kwargs)
