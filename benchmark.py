@@ -1,6 +1,6 @@
 """
     @title: benchmark: Convenience script for benchmarking in python, similar to the microbenchmark package in R
-    @author: Chibisi CHima-Okereke
+    @author: Chibisi Chima-Okereke
     @date: 2014-07-22
     @license: GPL>=2
 """
