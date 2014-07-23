@@ -5,29 +5,43 @@ Scripts that carry out benchmarking in Python similar to the microbenchmarks pac
 
 # Description
 
+## The `bench` function
 The `bench` function is the workhorse function for benchmarking the details are given below
 
 ```
 bench(sExpr, neval=100, units = "ms", ndigits = 5)
+
+
+sExpr: This is a string expression
+units: These are units, defaults to "ms": milliseconds, but "us": microseconds,
+        "ns": nanoseconds, "s": time in seconds, "raw": raw time in seconds are available
+ndigits: the are number of decimal places.
 ```
 
-`sExpr`: This is a string expression
-`units`: These are units, defaults to `"ms"`: milliseconds, but `"us"`: microseconds,
-        `"ns"`: nanoseconds, `"s"`: time in seconds, `"raw"`: raw time in seconds are available
-`ndigits`: the are number of decimal places.
+## The `benchmark` function
+
+The `benchmark` function is a convenience function for the programmer and the details 
+are given below
 
 ```
 benchmark(*args, **kwargs)
+
+*args: are comma separated string arguments to be evaluated in the benchmark
+**kwargs: are named arguments passed to the bench function
 ```
-`*args`: are comma separated string arguments to be evaluated in the benchmark
-`**kwargs`: are named arguments passed to the `bench` function
+
+## The `lbenchmark` function
+
+The `lbenchmark` function is a convenience function for the programmer and the details 
+are given below
+
 
 ```
 lbenchmark(lExpr, **kwargs)
-```
-`lExpr`: This is a list of expressions
-`**kwargs`: are names arguments that are passed to the `bench` function
 
+lExpr: This is a list of expressions
+**kwargs: are names arguments that are passed to the bench function
+```
 
 # Usage Examples
 
