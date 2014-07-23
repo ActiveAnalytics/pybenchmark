@@ -102,7 +102,7 @@ def benchmark(*args, **kwargs):
             out.rbind(bench(args[i], **kwargs))
     return out
 
-def lbenchmark(lExpr, neval = 100, units = "ms", ndigits = 5):
+def lbenchmark(lExpr, **kwargs):
     """
     List version of benchmark, takes in a list of string expressions as lExpr
 
@@ -114,8 +114,8 @@ def lbenchmark(lExpr, neval = 100, units = "ms", ndigits = 5):
     :return: SimpleTable of times min, lower, mid, upper quartiles and max time, and the expression run
     """
     nExpr = lExpr.__len__()
-    out = bench(lExpr[0], neval, units, ndigits)
+    out = bench(lExpr[0], **kwargs)
     if nExpr > 1:
         for i in np.arange(1, nExpr):
-            out.rbind(bench(lExpr[i], neval, units, ndigits))
+            out.rbind(bench(lExpr[i], **kwargs))
     return out
