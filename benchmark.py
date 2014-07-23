@@ -83,7 +83,7 @@ def bench(sExpr, neval=100, units = "ms", ndigits = 5):
     times = np.percentile(times, [0, 25, 50, 75, 100])
     times = timeUnits(times, units, ndigits)
     summ = SimpleTable([('expr', [sExpr]), ('min', [times[0]]), ('lq', [times[1]]), ('median', [times[2]]),
-                            ('uq', [times[3]]), ('max', [times[4]])])
+                            ('uq', [times[3]]), ('max', [times[4]]), ('neval', [neval])])
     return summ
 
 
