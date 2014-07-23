@@ -80,10 +80,10 @@ np.random.uniform(size=1000)  0.01597  0.01693   0.01693  0.01812  0.05293      
         "np.random.binomial(size=1000, n=10, p = .5)", "np.random.poisson(size=1000, lam=1)", units="us")
 expr                                             min       lq    median        uq       max    neval
 -------------------------------------------  -------  -------  --------  --------  --------  -------
-np.random.uniform(size=1000)                 37.9085  38.8622   39.1007   41.008    70.0951      100
-np.random.normal(size=1000)                  52.9289  57.9357   61.9888  134.945   178.099       100
-np.random.binomial(size=1000, n=10, p = .5)  56.982   59.1278   64.1346   65.0883   88.2149      100
-np.random.poisson(size=1000, lam=1)          61.9888  64.075    66.0419   73.6117  119.925       100
+np.random.uniform(size=1000)                 15.974   16.9277   16.9277   17.1661   28.8486      100
+np.random.normal(size=1000)                  56.982   78.7377   82.016   112.236   325.918       100
+np.random.binomial(size=1000, n=10, p = .5)  57.9357  59.8431   60.7967   61.9888  191.212       100
+np.random.poisson(size=1000, lam=1)          62.9425  68.6646   71.0487   80.8835  120.878       100
 ```
 
 ## A list of expressions
@@ -93,10 +93,10 @@ np.random.poisson(size=1000, lam=1)          61.9888  64.075    66.0419   73.611
                "np.random.binomial(size=1000, n=10, p = .5)", "np.random.poisson(size=1000, lam=1)"]
 
 >>> lbenchmark(evalStrings, units = "us")
-expr                                             min       lq    median        uq       max    neval
--------------------------------------------  -------  -------  --------  --------  --------  -------
-np.random.uniform(size=1000)                 24.7955  38.8622   39.1007   41.008   100.851       100
-np.random.normal(size=1000)                  56.0284  57.9357  131.965   135.362   169.039       100
-np.random.binomial(size=1000, n=10, p = .5)  59.1278  64.075    65.0883   66.0419   94.8906      100
-np.random.poisson(size=1000, lam=1)          63.8962  66.0419   69.8566   72.2408  114.918       100
+expr                                             min       lq    median       uq       max    neval
+-------------------------------------------  -------  -------  --------  -------  --------  -------
+np.random.uniform(size=1000)                 24.7955  25.9876   25.9876  28.1334   56.0284      100
+np.random.normal(size=1000)                  76.0555  78.9166   85.1154  86.0691  168.085       100
+np.random.binomial(size=1000, n=10, p = .5)  59.1278  64.8499   66.5188  96.0827  120.163       100
+np.random.poisson(size=1000, lam=1)          64.8499  69.6778   70.0951  71.0487   97.99        100
 ```
